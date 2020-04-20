@@ -9,18 +9,26 @@
         <title>نرم افزار چت</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="./css/style.css">
     </head>
-    <body>
-        <h3>نرم افزار چت فعال است</h3>
-        
-        <ol id='messages'></ol>
+    <body class="chat">
+        <div class="chat__sidebar">
+            <h3> pepole </h3>
+            <div id="user">
 
-        <form id="message-form">
-            <input name="message" type="text" placeholder="Message">
-            <button type="submit">send</button>
-        </form>
-
+            </div>
+        </div>
+        <div class="chat__main">
+            <ol id='messages' class="chat__messages"></ol>
+            <div class="chat__footer">
+                <form id="message-form">
+                    <input name="message" type="text" placeholder="Message" autofocus autocomplete="false">
+                    <button type="submit">send</button>
+                    <button id="send-location" type="button">send location</button>
+                </form>
+            </div>
+        </div>
+    
         <script src="./js/lib/jquery-3.5.0.min.js"></script>
         <script src="/socket.io/socket.io.js"></script>
         <script src="js/index.js"></script>
