@@ -14,6 +14,16 @@
     <body>
         <h3>نرم افزار چت فعال است</h3>
         
-        <script src="" async defer></script>
+        <script src="/socket.io/socket.io.js"></script>\
+        <script>
+            var socket = io();
+
+            socket.on('connect' , ()=>{
+                console.log('connected to server');
+            })
+            socket.on('disconnect' , ()=>{
+                console.log("user Disconnect from server")
+            })
+        </script>
     </body>
 </html>
